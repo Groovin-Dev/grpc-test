@@ -1,0 +1,22 @@
+{
+	"name": "grpc-test",
+	"version": "1.0.0",
+	"description": "Messing with gRPC",
+	"main": "index.js",
+	"author": "Groovin",
+	"license": "MIT",
+	"devDependencies": {
+		"@types/node": "^16.6.0",
+		"typescript": "^4.3.5"
+	},
+	"dependencies": {
+		"@grpc/grpc-js": "^1.3.7",
+		"@grpc/proto-loader": "^0.6.4"
+	},
+	"scripts": {
+		"protoGen": "pwsh ./proto-gen.ps1",
+		"client": "ts-node client.ts",
+		"server": "ts-node server.ts",
+		"start": "yarn run server && yarn run client"
+	}
+}
